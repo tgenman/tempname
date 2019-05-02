@@ -1,4 +1,4 @@
-package com.dmitrybondarev.user_service.controller
+package com.dmitrybondarev.user_service
 
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
@@ -8,9 +8,10 @@ import org.springframework.web.bind.annotation.GetMapping
 @Controller
 class HomeController {
 
-    @GetMapping("/")
-    fun getIngex(model: Model): String {
-        model["title"] = "Blog"
-        return "blog"
-    }
+	@GetMapping("/")
+	fun getHomePage(model: Model): String {
+		model["title"] = "Blog"
+		return "blog"
+	}
+
 }
